@@ -2,6 +2,6 @@ jupyter-contrib-nbextensions==0.5.1
 matplotlib==3.3.4
 numpy==1.20.1
 pandas==1.2.4
-ffmpeg== 1.4
+ffmpeg-python==0.2.0
 
 
