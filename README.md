@@ -1,6 +1,6 @@
 # Abstract
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jdh-observer/ZDFmmD3xv4S7/HEAD?filepath=article.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jdh-observer/ZDFmmD3xv4S7/main?lab=article.ipynb)
 
 
 
