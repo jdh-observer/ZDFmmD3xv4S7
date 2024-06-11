@@ -18,7 +18,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region tags=["contributor"] -->
- ### Dagny Aurich [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-8823-0596)
+### Dagny Aurich [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-8823-0596)
  University of Luxembourg
 <!-- #endregion -->
 
@@ -29,7 +29,7 @@ University of Luxembourg
 <!-- #endregion -->
 
 <!-- #region tags=["contributor"] -->
- ### Dagny Aurich [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-8823-0596)
+### Jens van de Maele [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-7792-033X)
  University of Luxembourg
 <!-- #endregion -->
 
