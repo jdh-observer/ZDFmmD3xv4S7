@@ -339,7 +339,7 @@ The visualisation of the model was generated using a Python in Jupyter notebook,
 <!-- #endregion -->
 
 <!-- #region tags=["Section-6"] -->
-It can be said in advance that the calculated concentration values in our study are most likely to be underestimations, since only one emission source in southern Luxembourg was considered (thus eliminating many others). Yet, serving as an experiment, our analysis can be taken as a basis for further research (e.g. calculating the dust concentrations from all industrial plants in the entire Minett region). Other limitations and improvements of our model are discussed in ([Limitations and lacunae of the dust simulation](#anchor-Section-8-3)) and ([8.4](#anchor-Section-8-4)).
+It can be said in advance that the calculated concentration values in our study are most likely to be underestimations, since only one emission source in southern Luxembourg was considered (thus eliminating many others). Yet, serving as an experiment, our analysis can be taken as a basis for further research (e.g. calculating the dust concentrations from all industrial plants in the entire Minett region). Other limitations and improvements of our model are discussed in ([Limitations and lacunae of the dust simulation](#anchor-Section-8-3)) and ([Optimisation and improvement of the model](#anchor-Section-8-4)).
 
 <!-- #endregion -->
 
