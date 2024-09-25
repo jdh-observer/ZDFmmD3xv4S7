@@ -1,0 +1,49 @@
+on: [workflow_dispatch]
+
+name: GitHub Actions for nbconvert
+jobs:
+  nbconvert:
+    runs-on: ubuntu-latest
+    name: nbconvert
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+
+      - name: deleting nbconvert branch if exists
+        shell: bash
+        run: |
+          git push origin -d nbconvert &>/dev/null || true 
+      
+      - name: extracting branch name & creating the new nbconvert branch
+        shell: bash
+        run: |
+          echo "GitHub reft_name ${{ github.ref_name }}"
+          git checkout -b nbconvert
+          git push -u origin nbconvert
+        id: extract_branch
+      - name: retreiving name of the article
+        id: getfile
+        run: |
+          FIRST_FILE=$(ls *.ipynb | sort | head -n 1)
+          echo "article name is: $FIRST_FILE"
+          echo "FIRST_IPYNB_FILE=$FIRST_FILE" >> $GITHUB_ENV
+      - name: installing nbconvert & other required libraries
+        run: |
+          pip install -r requirements.txt
+          python -m pip install jupyter nbconvert nbformat notebook==6.4.12 spacy
+          python -m spacy download en_core_web_lg
+      - name: running nbconvert
+        run: |
+          jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=-1 $FIRST_IPYNB_FILE
+
+      - name: committing changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated commit
+          branch: nbconvert
+          create_branch: true
+      
+      - name: creating pull request
+        run: gh pr create -B ${{ github.ref }} -H nbconvert --title 'Comparison between nbconvert review of the article and the main article' --body 'Created by Github action'
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
